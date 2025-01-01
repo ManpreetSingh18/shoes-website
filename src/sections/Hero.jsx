@@ -71,7 +71,7 @@ const Hero = () => {
           absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
           {shoes.map((shoe,index)=>(
             
-            <div key={shoe}>
+            <div key={shoe.id || index}>
              
               <ShoeCard
                 imgURL={shoe}
