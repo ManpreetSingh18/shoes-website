@@ -11,7 +11,7 @@ const Hero = () => {
     <section
       id="home"
       className="w-full flex xl:flex-row flex-col justify-center 
-      min-h-screen gap-10  max-container  p-2"
+      min-h-screen gap-10  max-container "
     >
       <div
         className="relative 
@@ -23,7 +23,7 @@ const Hero = () => {
         </p>
         <h1
           className="mt-10 font-palanquin text-8xl max-sm:text-[72px] 
-                max-sm:leading-[82] font-bold"
+                max-sm:leading-[82px] font-bold"
         >
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10 ">
             The New Arrival
@@ -45,11 +45,11 @@ const Hero = () => {
 
         <Button label="Shop Now" iconURL={arrowRight} />
         <div
-          className="flex justify-starts items-start flex-wrap w-full
+          className="flex justify-start items-start flex-wrap w-full
                  mt-20 gap-16 "
         >
           {statistics.map((stat, index) => (
-            <div key={stat.label}>
+            <div key={index}>
               <p className="text-4xl font-palanquin font-bold ">{stat.value}</p>
               <p className="leading-7 font-montserrat text-slate-gray">{stat.label}</p>
             </div>
@@ -61,20 +61,21 @@ const Hero = () => {
         xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center " >
         <img 
         src={bigShoeImg}
-        alt="" 
+        alt="shoe collection" 
         width={610}
-        height={500}
+        height={502}
         className="object-contain relation z-10"
         />
 
         <div className="flex sm:gap-6 gap-4 
           absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
-          {shoes.map((shoe,index)=>(
+          {shoes.map((image,index)=>(
             
-            <div key={shoe.id || index}>
+            <div key={index}>
              
               <ShoeCard
-                imgURL={shoe}
+                index={index}
+                imgURL={image}
                 changeBigShoeImage={(shoe)=>{
                   setbigShoeImg(shoe);
                 }}

@@ -7,7 +7,7 @@ const Subscribe = () => {
           ont-palanquin">Sign Up Form 
         <span className="text-coral-red">
            Updates
-        </span> & NewsLetter
+        </span>& NewsLetter
         </h3>
 
         <div className="lg:max-w-[40%] w-full flex items-center 
