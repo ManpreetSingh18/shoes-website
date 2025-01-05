@@ -1,6 +1,6 @@
 import Hero from './Hero';
 
-import PopularProduct from  './popularProduct';
+import PopularProduct from  './PopularProduct';
 
 import SuperQuality from './SuperQuality';
 import Services from './services';
